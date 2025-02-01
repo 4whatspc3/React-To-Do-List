@@ -4,7 +4,9 @@ function ToDoList() {
   const [task, setTasks] = useState([]);
   const [newTask, setNewTask] = useState("");
 
-  function handleInputChange(e) {}
+  function handleInputChange(e) {
+    return setNewTask(e.target.value);
+  }
 
   function addTask() {}
 
@@ -14,7 +16,22 @@ function ToDoList() {
 
   function moveTaskDown(index) {}
 
-  return <></>;
+  return (
+    <>
+      <div className="to-do-list">
+        <h1>To-Do-List</h1>
+
+        <div>
+          <input
+            type="text"
+            placeholder="Enter a task..."
+            value={newTask}
+            onChange={handleInputChange}
+          />
+        </div>
+      </div>
+    </>
+  );
 }
 
 export default ToDoList;
