@@ -12,7 +12,12 @@ function ToDoList() {
     return setNewTask(e.target.value);
   }
 
-  function addTask() {}
+  function addTask() {
+    if (newTask.trim() !== "") {
+      setTasks((t) => [...t, newTask]);
+      setNewTask("");
+    }
+  }
 
   function deleteTask(index) {}
 
@@ -32,7 +37,9 @@ function ToDoList() {
             value={newTask}
             onChange={handleInputChange}
           />
-          <button>Add</button>
+          <button className="add-button" onClick={addTask}>
+            Add
+          </button>
         </div>
 
         <ol>
