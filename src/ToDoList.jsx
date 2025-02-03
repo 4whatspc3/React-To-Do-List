@@ -51,7 +51,7 @@ function ToDoList() {
       <div className="to-do-list">
         <h1>To-Do-List</h1>
 
-        <div>
+        <div className="get-data">
           <input
             type="text"
             placeholder="Enter a task..."
@@ -59,7 +59,7 @@ function ToDoList() {
             onChange={handleInputChange}
           />
           <button className="add-button" onClick={addTask}>
-            Add
+            &#10133; Add
           </button>
         </div>
 
@@ -71,16 +71,16 @@ function ToDoList() {
                 className="delete-button"
                 onClick={() => deleteTask(index)}
               >
-                Delete
+                &#10006; Delete
               </button>
               <button className="move-button" onClick={() => moveTaskUp(index)}>
-                Move up
+                &#128228; Move up
               </button>
               <button
                 className="move-button"
                 onClick={() => moveTaskDown(index)}
               >
-                Move down
+                &#128229; Move down
               </button>
             </li>
           ))}
