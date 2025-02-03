@@ -9,7 +9,7 @@ body {
     align-items: center;
     font-family: "Jersey 15", system-ui, "Segoe UI", Helvetica, Arial, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    animation: 2s change-size infinite alternate;
+    animation: 6s change-size infinite alternate;
 }
   
 @keyframes change-size {
