@@ -1,12 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Jersey+15&display=swap");
 
 body {
+    background-color: black;
+    background-image: url("./assets/endless-constellation.svg");
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: "Jersey 15", system-ui, "Segoe UI", Helvetica, Arial, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    animation: 2s change-size infinite alternate;
 }
+  
+@keyframes change-size {
+from {
+    background-position-y: top;
+}
+
+to {
+    background-position-y: center;
+}
+}
+  
 
 .to-do-list {
     display: flex;
@@ -14,8 +28,9 @@ body {
     justify-content: center;
     align-items: center;
     max-width: 1000px;
-    background-color: black;
+    border: 1px solid violet;
     border-radius: 12px;
+    gap: 20px;
 }
 
 h1 {
@@ -83,4 +98,27 @@ span {
 .move-button:hover {
     background-color: rgb(160, 98, 219);
     transform: scale(1.1);
+}
+
+@media (max-width: 700px) {
+    .to-do-list {
+        min-width: 400px;
+    }
+
+    .get-data {
+        flex-direction: column;
+    }
+
+    input {
+        padding: 15px 10px;
+    }
+
+    li {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    button {
+        width: 200px;
+    }
 }
