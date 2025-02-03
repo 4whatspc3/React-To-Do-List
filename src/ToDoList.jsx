@@ -86,6 +86,16 @@ function ToDoList() {
           ))}
         </ol>
       </div>
+
+      <div className="author">
+        <p>
+          Created by <b>Matheus Augusto</b>. Source and photo credits on my{" "}
+          <a href="https://github.com/4whatspc3" target="_blank">
+            GitHub
+          </a>
+          .
+        </p>
+      </div>
     </>
   );
 }

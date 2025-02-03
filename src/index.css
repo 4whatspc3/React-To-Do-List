@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Jersey+15&display=swap");
 
 body {
+    overflow: hidden;
     background-color: black;
     background-image: url("./assets/endless-constellation.svg");
     display: flex;
@@ -20,7 +21,14 @@ to {
     background-position-y: center;
 }
 }
-  
+ 
+#root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
 
 .to-do-list {
     display: flex;
@@ -98,6 +106,11 @@ span {
 .move-button:hover {
     background-color: rgb(160, 98, 219);
     transform: scale(1.1);
+}
+
+.author {
+    color: white;
+    text-align: center;
 }
 
 @media (max-width: 700px) {
