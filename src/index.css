@@ -35,7 +35,7 @@ to {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 1000px;
+    min-width: 680px;
     border: 1px solid violet;
     border-radius: 12px;
     gap: 20px;
@@ -94,7 +94,9 @@ li {
 span {
     width: 200px;
     padding-right: 20px;
-    overflow: scroll;
+    overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-color: white transparent;
 }
 
 .delete-button,
